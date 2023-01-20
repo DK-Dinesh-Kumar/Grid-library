@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<configuration>
+  <profile>
+    <WCFSERVICE>
+      <add key="EnableMEX" value="0" />
+      <add key="BindingType" value="http" />
+      <add key="Instance" value="arms" />
+      <add key="ApplicationClient" value="arms" />
+ 
+      <add key="PrivateIPAddress" value="192.168.16.156" />
+      <add key="PublicIPAddress" value="192.168.16.156" />
+      <add key="PrivatePort" value="9095" />
+      <add key="PublicPort" value="9095" />
+      <add key="HTTPTimeout" value="300" />
+      <add key="HTTPReadWriteTimeout" value="10000" />
+      <add key="HTTPContinueTimeout" value="300" />
+      <add key="ApplicationURL" value="http://192.168.16.156:9095/arms/" />
+      <add key="SecurityModel" value="0" />
+      <add key="OfflineEnabled" value="1" />
+    </WCFSERVICE>
+    <MESSAGESERVICE>
+      <add key="HubIPAddress" value="192.168.16.156:9095" />
+      <add key="HubPort" value="8080" />
+      <add key="HubConnectionTimeout" value="100" />
+      <add key="HubDisconnectTimeout" value="50" />
+      <add key="HubKeepAlive" value="20" />
+      <add key="HubScaleout" value="0" />
+    </MESSAGESERVICE>   
+    <SPM>
+      <add key="Max Service Points" value="1000" />
+      <add key="Max Service Point Idle Time" value="10000" />
+      <add key="Connection Limit" value="2147483647" />
+      <add key="DNS Refresh Timeout" value="-1" />
+    </SPM>
+    <APPLICATION>
+      <add key="ApplicationFormStyle" value="2" />
+      <add key="ApplicationRibbonStyle" value="5" />
+    </APPLICATION>
+  </profile>
+  <configSections>
+    <SectionGroup name="profile">
+      <Section name="WCFSERVICE" type="System.Configuration.NameValueSectionHandler, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Custom=null" />
+      <Section name="MESSAGESERVICE" type="System.Configuration.NameValueSectionHandler, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Custom=null" />      
+      <Section name="SPM" type="System.Configuration.NameValueSectionHandler, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Custom=null" />
+      <Section name="APPLICATION" type="System.Configuration.NameValueSectionHandler, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Custom=null" />
+    </SectionGroup>
+  </configSections>
+</configuration>
